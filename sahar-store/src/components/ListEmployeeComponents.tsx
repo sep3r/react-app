@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 function ListEmployeeComponents() {
     const dataDummy = [
@@ -25,9 +25,9 @@ function ListEmployeeComponents() {
 }
 ]
   return (
-    <div>
+    <div className='container'>
     <h2>ListEmployeeComponents</h2>
-    <table>
+    <table className='table table-striped table-bordered'>
         <thead>
             <tr>
                 <th>Employee Id</th>
