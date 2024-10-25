@@ -1,47 +1,34 @@
-function ListEmployeeComponents() {
-    const dataDummy = [
-        {
-            "id":"1",
-            "name":"Sepehr",
-            "family":"Mirzanezhad",
-            "email":"sep3r@yahoo.com"
+import {useEffect, useState} from "react"
+import { listStudents } from "../services/EmployeeService"
+const ListEmployeeComponents = () => {
+    
+    const [students, setStudents] = useState([])
 
-    },
-    {
-        "id":"2",
-        "name":"sahar",
-        "family":"Mirzanezhad",
-        "email":"sep3r@yahoo.com"
-
-},
-{
-    "id":"3",
-    "name":"mona",
-    "family":"zarei",
-    "email":"sep3r@yahoo.com"
-
-}
-]
+    useEffect(() => {
+        listStudents().then((response) =>{
+            setStudents(response.data);
+        }).catch(error => {
+            console.error(error);
+        })
+    }, [])
   return (
     <div className='container'>
     <h2 >ListEmployeeComponents</h2>
     <table className='table table-striped table-bordered'>
         <thead>
             <tr>
-                <th>Employee Id</th>
-                <th>Employee Fist Name</th>
-                <th>Employee Last Name</th>
-                <th>Employee Email Address</th>
+                <th>Student Id</th>
+                <th>Student Fist Name</th>
+                <th>Student Last Name</th>
             </tr>
         </thead>
         <tbody>
             {
-                dataDummy.map(employee=>
-                    <tr key={employee.id}>
-                        <td>{employee.id}</td>
-                        <td>{employee.name}</td>
-                        <td>{employee.family}</td>
-                        <td>{employee.email}</td>
+                students.map(student=>
+                    <tr key={student.id}>
+                        <td>{student.id}</td>
+                        <td>{student.name}</td>
+                        <td>{student.surname}</td>
                     </tr>
                 )
             }
