@@ -15,13 +15,13 @@ const ListStudentComponent = () => {
     }, [])
   return (
     <div className='container'>
-    <h2 className="text-center">ListEmployeeComponents</h2>
+    <h2 className="text-center">ListStudentsComponents</h2>
     <table className='table table-striped table-bordered'>
         <thead>
             <tr>
-                <th>Student Id</th>
-                <th>Student Fist Name</th>
-                <th>Student Last Name</th>
+                <th scope="col">Student Id</th>
+                <th scope="col">Student Fist Name</th>
+                <th scope="col">Student Last Name</th>
             </tr>
         </thead>
         <tbody>
