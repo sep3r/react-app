@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import HeaderComponent from './components/HeaderComponent'
-import ListEmployeeComponent from './components/ListStudentComponent'
+import HeaderComponent from './components/HeaderComponent';
+import ListEmployeeComponent from './components/ListStudentComponent';
 
 function App() {
   
