@@ -19,9 +19,9 @@ const ListStudentComponent = () => {
     <table className='table table-striped table-bordered'>
         <thead>
             <tr>
-                <th scope="col">Student Id</th>
-                <th scope="col">Student Fist Name</th>
-                <th scope="col">Student Last Name</th>
+                <th>Student Id</th>
+                <th>Student Fist Name</th>
+                <th>Student Last Name</th>
             </tr>
         </thead>
         <tbody>
