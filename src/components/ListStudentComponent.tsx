@@ -1,11 +1,12 @@
 import React from "react"
 import {useEffect, useState} from "react"
 import { listStudents } from '../Services/StudentService'
-import { Button } from "bootstrap"
+import { useNavigate } from "react-router-dom"
 
 const ListStudentComponent = () => {
     
-    const [students, setStudents] = useState([])
+    const [students, setStudents] = useState([]);
+    const navigator = useNavigate();
 
     useEffect(() => {
         listStudents().then((response) =>{
@@ -14,9 +15,11 @@ const ListStudentComponent = () => {
             console.error(error);
         })
     }, [])
+
     function addNewStudent(){
-        
+        navigator('/add-student')
     }
+
   return (
     <div className='container'>
     <h2 className="text-center">ListStudentsComponents</h2>
