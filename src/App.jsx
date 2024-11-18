@@ -1,15 +1,21 @@
 import React from 'react';
 import HeaderComponent from './components/HeaderComponent';
-import ListEmployeeComponent from './components/ListStudentComponent';
+import ListStudentComponent from './components/ListStudentComponent';
 import FooterComponent from './components/FooterComponent';
+import { BrowserRouter , Routes, Route} from 'react-router-dom';
 
 function App() {
   
   return (
     <>
+    <BrowserRouter>
       <HeaderComponent />
-      <ListEmployeeComponent />
+      <Routes>
+        <Route path='/' element = { <ListStudentComponent />}></Route>
+        <Route path='/employees' element =  { <ListStudentComponent />}></Route>
+      </Routes>
       <FooterComponent />
+      </BrowserRouter>
     </>
   )
 }

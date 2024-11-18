@@ -1,6 +1,7 @@
 import React from "react"
 import {useEffect, useState} from "react"
 import { listStudents } from '../Services/StudentService'
+import { Button } from "bootstrap"
 
 const ListStudentComponent = () => {
     
@@ -13,9 +14,13 @@ const ListStudentComponent = () => {
             console.error(error);
         })
     }, [])
+    function addNewStudent(){
+        
+    }
   return (
     <div className='container'>
     <h2 className="text-center">ListStudentsComponents</h2>
+    <button type="button" className="btn btn-primary mb-2" onClick={addNewStudent}>Add Student</button>
     <table className='table table-striped table-bordered'>
         <thead>
             <tr>
